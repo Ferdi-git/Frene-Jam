@@ -4,6 +4,7 @@ using UnityEngine;
 public class mobSpawner : MonoBehaviour
 {
     public GameObject mobPrefab;
+    public SOEnemy[] difEnemies;
     public float inBetweenSpawnTime = 0.5f;
     private bool canSpawn = true;  
 
@@ -17,7 +18,9 @@ public class mobSpawner : MonoBehaviour
         canSpawn = false;
         float randfloat = Random.Range(-8f, 8f);
         Vector2 pos = new Vector2(transform.position.x + randfloat, transform.position.y);
-        Instantiate(mobPrefab, pos, Quaternion.identity);
+        int randint = Random.Range(0, difEnemies.Length);
+        var newEnemy = Instantiate(mobPrefab, pos, Quaternion.identity);
+        newEnemy.GetComponent<Enemy>().Initialise(difEnemies[randint]);
         yield return new WaitForSeconds(inBetweenSpawnTime);
         canSpawn = true;
 

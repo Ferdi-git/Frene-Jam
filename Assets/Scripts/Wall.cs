@@ -3,7 +3,7 @@ using UnityEngine;
 public class Wall : MonoBehaviour
 {
     public float wallHealth = 1000f;
-
+    public UIManager uiManager;
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))
@@ -15,6 +15,7 @@ public class Wall : MonoBehaviour
                 wallHealth = 0;
                 Destroy(gameObject);
             }
+            uiManager.UpdateSlider(wallHealth);
         }
     }
 
