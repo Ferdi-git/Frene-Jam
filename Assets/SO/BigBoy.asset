@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BigBoy
   m_EditorClassIdentifier: 
   life: 100
-  speed: 0.5
+  speed: 1
   damage: 1
   scale: 1
   sprite: {fileID: 6850810164100482539, guid: adf2394977595194abc9e20091748d65, type: 3}

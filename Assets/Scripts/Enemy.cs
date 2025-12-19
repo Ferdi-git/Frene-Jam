@@ -5,6 +5,7 @@ public class Enemy : MonoBehaviour
 {
     public float speed  = 0.1f;
     public float health = 100f;
+    public ParticleSystem particleSystem;
     public SpriteRenderer spriteRenderer;
 
     public void Initialise(SOEnemy so)
@@ -25,8 +26,10 @@ public class Enemy : MonoBehaviour
     {
         StartCoroutine(CoBlink());
 
-        health -= dmg; 
-        if(health < 0)
+        health -= dmg;
+        particleSystem.Play();
+
+        if (health < 0)
         {
             health = 0;
             Destroy(gameObject);
