@@ -329,10 +329,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mobPrefab: {fileID: 8300447130968256625, guid: ff504351d17c1774dbc3ded6b9b401ea, type: 3}
-  difEnemies:
-  - {fileID: 11400000, guid: 74b7eec5a0aeb0244bc2b8fcfe1b0b41, type: 2}
-  - {fileID: 11400000, guid: 273e893dec7377a458f2aeb847efb213, type: 2}
-  inBetweenSpawnTime: 0.7
+  difVagues:
+  - enemies: []
+    spawnInterval: 0.7
+  - enemies: []
+    spawnInterval: 0.7
+  inBetweenSpawnTime: 0.4
 --- !u!1 &86054126
 GameObject:
   m_ObjectHideFlags: 0
