@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 369cee17fb27c9c4a819672c39c0395e, type: 3}
   m_Name: Fast
   m_EditorClassIdentifier: 
-  life: 50
-  speed: 0.5
-  damage: 1
-  scale: 0.6
-  sprite: {fileID: -7377882439045798774, guid: c7f607cfde7c81a45ac66123cb6f6e9e, type: 3}
+  life: 30
+  speed: 1
+  damage: 2
+  scale: 0.5
+  points: 15
+  sprite: {fileID: 1068543819060846754, guid: acd0410e5c5f4954bbfbaea0625022de, type: 3}

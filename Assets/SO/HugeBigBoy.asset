@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 369cee17fb27c9c4a819672c39c0395e, type: 3}
+  m_Name: HugeBigBoy
+  m_EditorClassIdentifier: 
+  life: 200
+  speed: 0.25
+  damage: 5
+  scale: 1.5
+  points: 50
+  sprite: {fileID: 460863121798259268, guid: 20d2416b3d7bce14da3b8832a355636c, type: 3}

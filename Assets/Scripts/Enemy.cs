@@ -7,9 +7,11 @@ public class Enemy : MonoBehaviour
     public float health = 100f;
     public ParticleSystem particleSystem;
     public SpriteRenderer spriteRenderer;
+    private SOEnemy soEnemy;
 
     public void Initialise(SOEnemy so)
     {
+        soEnemy = so;
         speed = so.speed;
         health = so.life;
         spriteRenderer.sprite = so.sprite;
@@ -32,6 +34,8 @@ public class Enemy : MonoBehaviour
         if (health < 0)
         {
             health = 0;
+            ScoreManager.instance.AddToScore(soEnemy.points);
+            PopupManager.instance.CreatePopup(transform.position, soEnemy.points);
             Destroy(gameObject);
         }
     }

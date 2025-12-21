@@ -107,6 +107,8 @@ MonoBehaviour:
   health: 100
   particleSystem: {fileID: 9165015466186039078}
   spriteRenderer: {fileID: 4847848875193574076}
+  prefabPoints: {fileID: 2175278293861781711, guid: c4f8f43b367e1dc47bcd7dbcb3ffec09, type: 3}
+  soEnemy: {fileID: 0}
 --- !u!61 &7473814111217432927
 BoxCollider2D:
   m_ObjectHideFlags: 0

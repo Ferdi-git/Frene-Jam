@@ -5,9 +5,14 @@ public class mobSpawner : MonoBehaviour
 {
     public GameObject mobPrefab;
     public Vague[] difVagues;
-    public float inBetweenSpawnTime = 0.5f;
     private bool canSpawn = true;  
-    private int curentWave = 0;
+    private int currentWave = 0;
+
+    private void Start()
+    {
+        currentWave = 0;
+        StartCoroutine(WaveDuration());
+    }
 
     void FixedUpdate()
     {
@@ -19,13 +24,24 @@ public class mobSpawner : MonoBehaviour
         canSpawn = false;
         float randfloat = Random.Range(-8f, 8f);
         Vector2 pos = new Vector2(transform.position.x + randfloat, transform.position.y);
-        int randint = Random.Range(0, difVagues[curentWave].enemies.Length);
+        int randint = Random.Range(0, difVagues[currentWave].enemies.Length);
         var newEnemy = Instantiate(mobPrefab, pos, Quaternion.identity);
-        newEnemy.GetComponent<Enemy>().Initialise(difVagues[curentWave].enemies[randint]);
-        yield return new WaitForSeconds(difVagues[curentWave].spawnInterval);
+        newEnemy.GetComponent<Enemy>().Initialise(difVagues[currentWave].enemies[randint]);
+        yield return new WaitForSeconds(difVagues[currentWave].spawnInterval);
         canSpawn = true;
 
 
+    }
+
+    private IEnumerator WaveDuration()
+    {
+        while (currentWave < difVagues.Length-1)
+        {
+            yield return new WaitForSeconds(difVagues[currentWave].waveLength);
+            currentWave++;
+
+        }
+        print("Win");
     }
 
 }

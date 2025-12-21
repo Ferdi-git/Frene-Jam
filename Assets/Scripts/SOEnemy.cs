@@ -9,6 +9,7 @@ public class SOEnemy : ScriptableObject
     public float speed = 1;
     public float damage = 1;
     public float scale = 1;
+    public int points = 10;
     public Sprite sprite;
 
 }

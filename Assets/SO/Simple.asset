@@ -16,4 +16,5 @@ MonoBehaviour:
   speed: 0.5
   damage: 1
   scale: 0.6
+  points: 10
   sprite: {fileID: -7377882439045798774, guid: c7f607cfde7c81a45ac66123cb6f6e9e, type: 3}

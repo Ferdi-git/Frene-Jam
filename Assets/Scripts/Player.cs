@@ -37,7 +37,6 @@ public class Player : MonoBehaviour
             {
                 if (col.CompareTag("Enemy"))
                 {
-                    Debug.Log("HIT ENEMY");
                     animator.SetTrigger("Attack");
                     col.GetComponent<Enemy>().Hit(damage);
                 }
